@@ -21,9 +21,9 @@ def clear():
 		os.system('cls')
 	except:
 		try:
-			os.system('clear')
-		except:
 			os.system("printf '\033c'")
+		except:
+			os.system('clear')
 
 #setup
 pygame.mixer.init(44100, -16, 2, 2048)
@@ -185,4 +185,5 @@ while True:
         print('I don\'t know that')
 print('**YOU HAVE QUITTED THIS PROGRAM**')
 sleep(3)
+clear()
 exit(120)

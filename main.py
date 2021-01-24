@@ -17,7 +17,13 @@ def sleep_hours(hours):
     sleep(hours * 3600)
 
 def clear():
-	os.system('cls')
+	try:
+		os.system('cls')
+	except:
+		try:
+			os.system('clear')
+		except:
+			os.system("printf '\033c'")
 
 #setup
 pygame.mixer.init(44100, -16, 2, 2048)

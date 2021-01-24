@@ -18,12 +18,12 @@ def sleep_hours(hours):
 
 def clear():
 	try:
-		os.system('cls')
+		os.system('clear')
 	except:
 		try:
 			os.system("printf '\033c'")
 		except:
-			os.system('clear')
+			os.system('cls')
 
 #setup
 pygame.mixer.init(44100, -16, 2, 2048)
@@ -46,6 +46,7 @@ while True:
 >>> ''')
 
     if (user == 'math'):
+        clear()
         print('Ok! I will quiz you on math.')
         math_problems = int(input('How many problems do you want? > '))
         math_operator = input('What operation do you want for all of your problems? [add][subtract][multiply][divide] > ')
@@ -116,12 +117,15 @@ while True:
         print(f'You got {math_score} out of {math_problems} right.')
         user
     elif (user == 'dictionary'):
+        clear()
         user_dict = input('Ok! Enter what word you want to know about. >>> ')
         print(dictionary.meaning(user_dict))
     elif (user == 'browse'):
+        clear()
         user_browse = input('Ok! enter website name with domain. >>> ')
         webbrowser.open(user_browse, new=0, autoraise=True)
     elif (user == 'calculator'):
+        clear()
         global calc_operator
         calc_operator = input('''~~~~OPERATION~~~~
 [add]
@@ -164,6 +168,7 @@ while True:
         else:
             print('I don\'t know that')
     elif (user == 'timer'):
+        clear()
         ho = int(input("Enter how long (in Hours) > "))
         mi = int(input("Enter how long (in Minutes) > "))
         se = int(input("Enter how long (in Seconds) > "))
@@ -185,5 +190,4 @@ while True:
         print('I don\'t know that')
 print('**YOU HAVE QUITTED THIS PROGRAM**')
 sleep(3)
-clear()
 exit(120)
